@@ -99,14 +99,21 @@
             <p>This is a summary of the blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog-post2.html">Read More</a></p>
         </article>
     </section>
-    <section id="about" class="page-section">
-        <h2>About Us</h2>
-        <p>Provide information about your website or team.</p>
-    </section>
     <section id="contact" class="page-section">
         <h2>Contact Us</h2>
-        <p>Provide contact information or a contact form.</p>
-    </section>
+        <form method="post" action="send_email.php">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <input type="submit" value="Send Message">
+        </form>
+    </section>    
     
     <footer>
         <p>&copy; 2024 Games Website. All rights reserved.</p>
