@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bxrry games</title>
+    <title>Games Website</title>
     <style>
         body {
             font-family: 'Gamja Flower', cursive;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
+            background-color: #f7e6f9; /* Light purple background */
+            color: #5a5a5a; /* Dark gray text color */
         }
         header {
-            background-color: #c567bd;
+            background-color: #ff99cc; /* Pink header background */
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #d8a4d4;
-            padding: 10px 0;
+            background-color: #ffccff; /* Light pink navigation background */
+            padding: 10px;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            color: #5a5a5a;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            transition: all 0.3s ease;
+            margin: 0 10px;
         }
         nav a:hover {
             text-decoration: underline;
@@ -36,101 +34,41 @@
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #fff;
+            background-color: #ffffff; /* White background for sections */
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
         }
         footer {
-            background-color: #333;
+            background-color: #ff99cc; /* Pink footer background */
             color: #fff;
             padding: 20px;
             text-align: center;
             position: fixed;
-            width: 100%;
             bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>bxrry games!</h1>
+        <h1>Games Website</h1>
     </header>
     <nav>
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('games')">Games</a>
-        <a href="#" onclick="showPage('blog')">Blog</a>
-        <a href="#" onclick="showPage('about')">About</a>
-        <a href="#" onclick="showPage('contact')">Contact</a>
+        <a href="#">Home</a>
+        <a href="games.html">Games</a>
+        <a href="blog.html">Blog</a>
     </nav>
-    
-    <section id="home" class="page-section active">
-        <h2>Welcome to bxrry games!</h2>
-        <p>Explore my collection of exciting games and stay updated with my latest blog posts.</p>
+    <section>
+        <h2>Welcome to our Games Website!</h2>
+        <p>Explore our collection of exciting games and stay updated with our latest blog posts.</p>
     </section>
-    <section id="games" class="page-section">
-        <h2>Games</h2>
-        <ul>
-            <li><a href="game1.html">Hypercard!</a></li>
-        </ul>
-    </section>
-    <section id="contact" class="page-section">
-        <h2>Contact Us</h2>
-        <form method="post" action="emailform.php">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            
-            <input type="submit" value="Send Message">
-        </form>
-    </section> 
-    <section id="blog" class="page-section">
-        <h2>Blog</h2>
-        <article>
-            <h3>Blog Post Title 1</h3>
-            <p>This is a summary of the blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog-post1.html">Read More</a></p>
-        </article>
-        <article>
-            <h3>Blog Post Title 2</h3>
-            <p>This is a summary of the blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog-post2.html">Read More</a></p>
-        </article>
-    </section>   
-    
     <footer>
         <p>&copy; 2024 Games Website. All rights reserved.</p>
     </footer>
-
-    <script>
-        function showPage(pageId) {
-            // Hide all page sections
-            var pageSections = document.querySelectorAll('.page-section');
-            pageSections.forEach(function(section) {
-                section.classList.remove('active');
-            });
-
-            // Show the selected page
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
+
 
