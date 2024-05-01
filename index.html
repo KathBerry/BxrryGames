@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bxrry games!</title>
+    <title>bxrry games</title>
     <style>
-        /* Your existing styles */
-        /* Load Gamja Flower font from Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-
         body {
             font-family: 'Gamja Flower', cursive;
-            /* Other existing styles */
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
         }
         header {
-            background-color: #ff5b76;
+            background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #ca6274;
-            padding: 10px;
+            background-color: #444;
+            padding: 10px 0;
             text-align: center;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
         }
         nav a:hover {
             text-decoration: underline;
@@ -35,49 +36,94 @@
         section {
             padding: 20px;
             margin: 20px;
-            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
         }
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>bxrry games!</h1>
+        <h1>Games Website</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Games</a>
-        <a href="#">Blog</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('games')">Games</a>
+        <a href="#" onclick="showPage('blog')">Blog</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
     </nav>
-    <section>
-        <h2>Welcome to my website!</h2>
-        <p>Here you can see my games, news and little updates that I give!</p>
+    
+    <section id="home" class="page-section active">
+        <h2>Welcome to bxrry games!</h2>
+        <p>Explore my collection of exciting games and stay updated with my latest blog posts.</p>
     </section>
-    <section>
-        <h2>My games!</h2>
-        <p>There are a few by now-</p>
+    <section id="games" class="page-section">
+        <h2>Games</h2>
         <ul>
-            <li><a href="https://bxrrygames.itch.io/hypercard">Hypercard!</a></li>
-            <li><a href=>Secret Romance VN</a></li>
-            <li><a href=>Untitled Fantasy/Cozy VN</a></li>
+            <li><a href="game1.html">Hypercard!</a></li>
         </ul>
     </section>
-    <section>
-        <h2>Latest Blog Posts</h2>
+    <section id="blog" class="page-section">
+        <h2>Blog</h2>
         <article>
-            <h3>Welcome to bxrry games!</h3>
-            <p>Welcome to bxrry games, the new official site I made for my games and little news!</p>
-            <a href="blogpost1.html">Read More</a>
+            <h3>Blog Post Title 1</h3>
+            <p>This is a summary of the blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog-post1.html">Read More</a></p>
         </article>
+        <article>
+            <h3>Blog Post Title 2</h3>
+            <p>This is a summary of the blog post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog-post2.html">Read More</a></p>
+        </article>
+    </section>
+    <section id="about" class="page-section">
+        <h2>About Us</h2>
+        <p>Provide information about your website or team.</p>
+    </section>
+    <section id="contact" class="page-section">
+        <h2>Contact Us</h2>
+        <p>Provide contact information or a contact form.</p>
+    </section>
+    
     <footer>
-        <p>&copy; 2024, Katherine "Berry". All rights reserved.</p>
+        <p>&copy; 2024 Games Website. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all page sections
+            var pageSections = document.querySelectorAll('.page-section');
+            pageSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
+
